@@ -1,4 +1,4 @@
-# define
+# product-define
 
 Agent skills for product design *before* UI polish.
 
@@ -9,30 +9,30 @@ If your agent usually opens Figma or HTML on the first message, this suite is th
 ## Install
 
 ```bash
-npx skills add stvnprkns/define
+npx skills add stvnprkns/product-define
 ```
 
 You can also open the `skills/` folders in this repo, or install the root `*.skill` zips.
 
 ## How to use it
 
-Say **`define`** and describe the work.
+Say **`product-define`** and describe the work.
 
 The orchestrator picks a route based on how uncertain the problem is, tells you the plan, and waits for a go-ahead. Then it runs only the phases that help. Skips are allowed if it says why.
 
-Need one phase only? Call it by name (`define-frame`, `define-concept`, …).
+Need one phase only? Call it by name (`product-frame`, `product-concept`, …).
 
 ## The seven skills
 
 | Skill | Job |
 |---|---|
-| [`define`](skills/define/SKILL.md) | Chooses the route, enforces gates, keeps the design record |
-| [`define-frame`](skills/define-frame/SKILL.md) | Writes the problem brief from evidence (pain + Desire, constraints, success signals) |
-| [`define-model`](skills/define-model/SKILL.md) | Defines objects, states, and what data the UI can honestly show |
-| [`define-concept`](skills/define-concept/SKILL.md) | Generates many solution mechanisms, shows them visually, helps you cut to one |
-| [`define-flow`](skills/define-flow/SKILL.md) | Specs the task flows including empty, error, and interruption |
-| [`define-validate`](skills/define-validate/SKILL.md) | Tests the assumption most likely to kill the idea |
-| [`define-review`](skills/define-review/SKILL.md) | Critiques at the right layer, or QA-gates ship (SHIP / DEBT / HOLD) |
+| [`product-define`](skills/product-define/SKILL.md) | Chooses the route, enforces gates, keeps the design record |
+| [`product-frame`](skills/product-frame/SKILL.md) | Writes the problem brief from evidence (pain + Desire, constraints, success signals) |
+| [`product-model`](skills/product-model/SKILL.md) | Defines objects, states, and what data the UI can honestly show |
+| [`product-concept`](skills/product-concept/SKILL.md) | Generates many solution mechanisms, shows them visually, helps you cut to one |
+| [`product-flow`](skills/product-flow/SKILL.md) | Specs the task flows including empty, error, and interruption |
+| [`product-validate`](skills/product-validate/SKILL.md) | Tests the assumption most likely to kill the idea |
+| [`product-review`](skills/product-review/SKILL.md) | Critiques at the right layer, or QA-gates ship (SHIP / DEBT / HOLD) |
 
 Visual craft (color, type, motion) is not in this repo. Plug in your craft skill or design system after a concept is chosen.
 
@@ -47,11 +47,11 @@ A `design/` directory, typically:
 - `validation.md` / review notes when those phases run  
 - `context.md` — living summary every phase reads and updates  
 
-Gates stop you from polishing or coding past an unresolved problem, unknown data, or unchosen interaction model. See [`gates.md`](skills/define/assets/gates.md).
+Gates stop you from polishing or coding past an unresolved problem, unknown data, or unchosen interaction model. See [`gates.md`](skills/product-define/assets/gates.md).
 
 ## Concepting without a 20-minute wireframe tax
 
-`define-concept` shows **every** option early as simple idea cards (**Browse**), you cut, then builds more detail on the few that remain (**Compare**), then one full grayscale mock for the winner (**Commit**). Same six layout types the whole way; fidelity rises as the pile shrinks.
+`product-concept` shows **every** option early as simple idea cards (**Browse**), you cut, then builds more detail on the few that remain (**Compare**), then one full grayscale mock for the winner (**Commit**). Same six layout types the whole way; fidelity rises as the pile shrinks.
 
 ## Example routes
 

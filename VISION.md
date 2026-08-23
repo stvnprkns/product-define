@@ -1,4 +1,4 @@
-# Vision — what define is for
+# Vision — what product-define is for
 
 This suite puts the **missing middle** back between request and UI: truth, essence, divergence with discipline, and honest gates. It is a product-definition machine for agents and humans working together — not a pixel generator and not a ceremony generator.
 

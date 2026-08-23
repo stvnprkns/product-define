@@ -1,11 +1,11 @@
-# AGENTS.md — authoring define
+# AGENTS.md — authoring product-define
 
 Guidance for agents editing this repository. Runtime behavior for product work lives in `skills/*/SKILL.md`; this file is for changing the suite itself.
 
 ## Shape
 
-- **Orchestrator:** `define` — routes, gates, record, propose-then-act. Does not restate worker rules.
-- **Workers:** `define-frame` · `define-model` · `define-concept` · `define-flow` · `define-validate` · `define-review`
+- **Orchestrator:** `product-define` — routes, gates, record, propose-then-act. Does not restate worker rules.
+- **Workers:** `product-frame` · `product-model` · `product-concept` · `product-flow` · `product-validate` · `product-review`
 - **Craft:** external / pluggable — never duplicate `better-ui` motion, color, or type recipes here.
 
 ## Progressive disclosure
@@ -19,7 +19,7 @@ Link from the principle that needs the recipe. Do not restate the asset in short
 
 ## One owner per rule
 
-Point at siblings by skill name in backticks (`define-frame`). Conflict order: evidence → model → mechanism → flows → craft.
+Point at siblings by skill name in backticks (`product-frame`). Conflict order: evidence → model → mechanism → flows → craft.
 
 ## Calibration
 
