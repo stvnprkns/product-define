@@ -1,71 +1,75 @@
 # design-better
 
-A product-design process suite for agents. It puts the missing middle back between request and UI: diagnose uncertainty, run only the phases that reduce it, keep a shared design record, and gate craft and code on evidence.
+Most AI design sessions jump from a request to a screen. This suite is the work that should happen in between: figure out what problem you’re solving, what the product is made of, which mechanisms are worth trying, and which one to keep, before anyone spends a week on craft.
 
-**North star:** [VISION.md](VISION.md) · **Authoring this repo:** [AGENTS.md](AGENTS.md)
+Seven agent skills. One orchestrator. A shared design record so the next turn doesn’t forget the last.
 
-Install or open the `skills/` directories. Invoke `design-process` to route; invoke a worker by name for a single phase.
+Inspired by how [Karl Koch](https://karlkoch.me/writing/on-teaching-ai-how-you-work/) packages judgement into skills, and how [Jakub Krehel](https://jakub.kr/skills) makes install-and-run craft skills feel obvious. This set owns product definition, not pixels. Pair it with something like `better-ui` when you’re ready to polish.
 
-## Skills
+## Install
 
-| Skill | Role |
+```bash
+npx skills add stvnprkns/design-better
+```
+
+Or open the `skills/` folders in this repo. Installable packages also live at the root as `*.skill` zips.
+
+## Start here
+
+Ask for `design-process`. It classifies uncertainty (low / medium / high), proposes a route, and only runs the phases that reduce that uncertainty. Skips come with a reason. You approve the route before it runs.
+
+When you already know the phase, call it by name: `design-frame`, `design-model`, `design-concept`, `design-flow`, `design-validate`, `design-review`.
+
+## What you get
+
+| Skill | What it does for you |
 |---|---|
-| [`design-process`](skills/design-process/SKILL.md) | **Orchestrator** — uncertainty class, route, gates, design record, propose-then-act |
-| [`design-frame`](skills/design-frame/SKILL.md) | Evidence + assumption pressure test + Desire/sandbox/aging + triggered deep research + problem statement, non-goals, success signals |
-| [`design-model`](skills/design-model/SKILL.md) | Objects, data reality, IA / architecture |
-| [`design-concept`](skills/design-concept/SKILL.md) | Patterns, mechanism storm, shortlist, Browse → Compare → Commit sweep, subtract, briefs |
-| [`design-flow`](skills/design-flow/SKILL.md) | Task flows, state ledger, interruption / resumption |
-| [`design-validate`](skills/design-validate/SKILL.md) | Riskiest assumption, cheapest instrument, nine lenses |
-| [`design-review`](skills/design-review/SKILL.md) | Critique (route to owner) or QA (SHIP / DEBT / HOLD) |
+| [`design-process`](skills/design-process/SKILL.md) | Routes the work, keeps gates honest, maintains the design record |
+| [`design-frame`](skills/design-frame/SKILL.md) | Turns messy context into a problem brief: evidence, Desire, sandbox, aging, success signals |
+| [`design-model`](skills/design-model/SKILL.md) | Names the objects, data honesty, and disclosure the UI will lean on |
+| [`design-concept`](skills/design-concept/SKILL.md) | Storms mechanisms, then shows options as Browse → Compare → Commit so you cut while fidelity rises |
+| [`design-flow`](skills/design-flow/SKILL.md) | Happy path plus empty, error, and “I got interrupted and came back” |
+| [`design-validate`](skills/design-validate/SKILL.md) | Attacks the riskiest assumption with the cheapest instrument |
+| [`design-review`](skills/design-review/SKILL.md) | Critique that routes to the right owner, or QA with SHIP / DEBT / HOLD |
 
-Craft expression (visual system, tokens, motion) is **pluggable** — name `linear-design`, a house system, or another craft skill in the route. This suite owns why and how it works, not pixel craft.
+Craft (color, type, motion, tokens) stays pluggable. Name your house system in the route. This suite will not override a failed gate just because the mock looks pretty.
 
-## Ownership
+## How concepting stays fast
 
-| Concern | Owner |
-|---|---|
-| Route, skips, gates, record lifecycle, propose-then-act | `design-process` |
-| Evidence tags, assumption pressure test, Desire/sandbox/aging, triggered deep research, problem statement, non-goals, principles, signals | `design-frame` |
-| Objects, states, permissions, data honesty, nav / disclosure | `design-model` |
-| Patterns, mechanism storm, shortlist, Browse/Compare/Commit, subtract, briefs, cuts | `design-concept` |
-| Flows, states, interruption / resumption | `design-flow` |
-| Prototype instrument, lens table, backward routing of findings | `design-validate` |
-| Highest broken layer, QA verdict, hostile data | `design-review` |
+You still see a wall of options. Full kit cost only lands after you’ve cut.
 
-Point at a sibling by skill name in backticks. Never restate another skill's rules.
+1. **Browse** — every option as a labeled idea card  
+2. **Cut** — kill most of them while they’re cheap  
+3. **Compare** — survivors with real structure, abbreviated content  
+4. **Cut again** — pick a winner  
+5. **Commit** — one (or two) full grayscale frames, then subtract until one path feels inevitable  
 
-## Conflict order
-
-When skills disagree, resolve in this order:
-
-1. Evidence and problem (`design-frame`) beat concept preference.
-2. Model truth (`design-model`) beats UI claims the system cannot support.
-3. Selected mechanism (`design-concept`) beats layout preference.
-4. Flows and states (`design-flow`) beat polish.
-5. An external craft skill never overrides a failed gate.
+Details live in [`wireframe-recipe.md`](skills/design-concept/assets/wireframe-recipe.md).
 
 ## Typical routes
 
-- **Low uncertainty** — `concept` (patterns only; storm skipped) → `flow` → craft → `review` (QA).
-- **Medium** — `frame` (pressure-test + Desire/sandbox/aging) → `model?` → `concept` (patterns + storm + diverge + subtract) → `flow` → craft → `review` (QA).
-- **High** — `frame` (discover + deep-if-triggered + Desire/sandbox/aging) → `model` → `concept` (patterns + storm + diverge + subtract) → `flow` → `validate` → craft → `review` (QA).
+| Uncertainty | Route |
+|---|---|
+| Low | patterns → flow → craft → review (QA) |
+| Medium | frame → model? → concept → flow → craft → review |
+| High | frame → model → concept → flow → validate → craft → review |
 
-State the class and route before running. Skip with a reason. Re-classify when a phase surfaces surprise. Thin evidence deepens `design-frame`; it does not skip to concept. Skip storm when the mechanism is already chosen.
+Thin evidence deepens framing. It does not unlock a concept storm. If the mechanism is already chosen, skip the storm and say why.
+
+## When skills disagree
+
+1. Evidence and problem (`design-frame`)  
+2. Model truth (`design-model`)  
+3. Selected mechanism (`design-concept`)  
+4. Flows and states (`design-flow`)  
+5. Craft last — and never past a failed gate  
 
 ## Design record
 
-Created on first run from [`design-process/assets/design-record.md`](skills/design-process/assets/design-record.md). Every phase reads `design/context.md` first and updates it last. Gates live in [`gates.md`](skills/design-process/assets/gates.md).
+First run creates a `design/` folder from [`design-record.md`](skills/design-process/assets/design-record.md). Every phase reads `context.md` first and updates it last. Gates are in [`gates.md`](skills/design-process/assets/gates.md).
 
-## Wireframes
+## Skip this suite when
 
-Progressive fidelity in [`design-concept/assets/wireframe-recipe.md`](skills/design-concept/assets/wireframe-recipe.md):
+You need craft polish on an already-chosen direction (use `better-ui` or your house system). The change is a one-line table tweak. You want the agent to invent interview quotes. You’re about to spend a week on type while the concept is still undecided.
 
-1. **Browse** — all expressions as labeled region cards (breadth, Cut 1)  
-2. **Compare** — 3–5 keepers with kit chrome, abbreviated content (Cut 2)  
-3. **Commit** — winner at full composed grayscale (subtract, handoff)
-
-Still black-and-white at every stage; craft color comes after Commit via pluggable craft skills.
-
-## Progressive disclosure
-
-Each skill keeps principles in `SKILL.md` and depth in `assets/` (or `references/`). Open the Quick Reference table in a skill when you need templates, ledgers, or recipes — not before.
+North star: [VISION.md](VISION.md). Editing the suite itself: [AGENTS.md](AGENTS.md).
