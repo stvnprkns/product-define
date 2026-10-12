@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product define</title>
+    <meta
+      name="description"
+      content="Agent skills that keep the work on the problem: what it is, why it matters, and what would change your mind, before anyone draws a screen."
+    />
+    <meta property="og:title" content="Product define" />
+    <meta
+      property="og:description"
+      content="Agent skills that keep the work on the problem: what it is, why it matters, and what would change your mind, before anyone draws a screen."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=3" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="rain" aria-hidden="true">
+      <canvas id="rain" width="2400" height="800"></canvas>
+    </div>
+
+    <header class="top">
+      <a class="btn enter d3" href="https://github.com/stvnprkns/product-define"
+        >Open GitHub</a
+      >
+    </header>
+
+    <main id="main">
+      <header class="hero">
+        <h1>
+          <span>/product-define</span>
+        </h1>
+        <p class="lede enter d2">
+          Keep the agent on the problem until the what and why are written
+          down. How comes after that.
+        </p>
+        <p class="byline enter d3">
+          By
+          <a href="https://github.com/stvnprkns">Steve Perkins</a>
+        </p>
+      </header>
+
+      <div class="prose">
+        <div class="install">
+          <code id="install-cmd">npx skills add stvnprkns/product-define</code>
+          <button type="button" class="btn btn-quiet" id="copy-install">
+            Copy command
+          </button>
+        </div>
+        <p class="copy-status" id="copy-status" role="status"></p>
+        <p>
+          Hand an agent a ticket and it opens a layout. The request never
+          became a problem anyone could argue with.
+        </p>
+        <p>
+          This suite is the missing middle. The agent inspects the current
+          product, tags what is known versus assumed, and writes a brief you
+          can reject. Mechanism and craft wait until that brief is specific
+          enough to be wrong.
+        </p>
+      </div>
+
+      <section class="visual" aria-labelledby="define-heading">
+        <div class="prose tight">
+          <h2 id="define-heading" class="cmd">/product-define</h2>
+          <p>
+            Names what is uncertain and which phases would change a decision.
+            It proposes a plan and waits. A skip has to come with a reason.
+          </p>
+        </div>
+        <figure class="route" data-reveal>
+          <figcaption class="specimen-cap">
+            This run · Medium · problem understood, mechanism isn’t
+          </figcaption>
+          <ol class="route-steps">
+            <li>frame</li>
+            <li>model</li>
+            <li>concept</li>
+            <li>flow</li>
+            <li>validate</li>
+            <li>craft</li>
+            <li>review</li>
+          </ol>
+          <p class="route-note">
+            <span class="stamp">PROCEED WITH ASSUMPTION</span>
+            Estimators will leave the claim PDF for a worklist.
+          </p>
+        </figure>
+
+        <div class="prose tight">
+          <h2 class="cmd">/product-frame</h2>
+          <p>
+            Writes the problem from the codebase and the live product. A
+            feature request does not pass through intact.
+          </p>
+        </div>
+        <article class="brief">
+          <p class="brief-file">design/problem.md</p>
+          <p class="brief-kicker">Supplements</p>
+          <h3>Feel like the expert who already has the packet</h3>
+          <p>
+            An estimator reviewing a supplement has to decide what is real.
+            Evidence lives in PDFs, so they rebuild a spreadsheet before every
+            insurer call.
+          </p>
+          <ul>
+            <li>
+              <span>Seen</span> Three estimators rebuild that sheet before
+              every call.
+            </li>
+            <li>
+              <span>Heard</span> “Supplements are a knife-fight with the
+              insurer.”
+            </li>
+            <li>
+              <span>Assumed, challenged</span> They want a queue.
+            </li>
+          </ul>
+        </article>
+
+        <div class="prose tight">
+          <h2 class="cmd">/product-model</h2>
+          <p>
+            Objects, states, and what the data can honestly claim. A nightly
+            batch cannot pose as a live delta.
+          </p>
+        </div>
+        <figure class="specimen specimen-doc">
+          <div class="specimen-shell">
+            <div class="board board-doc" data-reveal>
+              <article class="wf commit">
+                <div class="meta">
+                  <div class="id">model.md</div>
+                  <div class="premise">What the UI may claim</div>
+                  <div class="varies">Nouns from the estimator, not the schema</div>
+                </div>
+                <div class="kit-body">
+                  <div class="wf-th">
+                    <span>Object</span>
+                    <span>States</span>
+                    <span>Honest?</span>
+                  </div>
+                  <div class="wf-td selected">
+                    <span>Anomaly</span>
+                    <span>open / resolved</span>
+                    <span>Δ is nightly</span>
+                  </div>
+                  <div class="wf-td">
+                    <span>Merchant</span>
+                    <span>—</span>
+                    <span>OCR on the invoice</span>
+                  </div>
+                  <div class="wf-td">
+                    <span>Evidence</span>
+                    <span>attached / missing</span>
+                    <span>Fresh at upload</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </figure>
+
+        <div class="prose tight">
+          <h2 class="cmd">/product-concept</h2>
+          <p>
+            Mechanisms first, then a grayscale wall you cut. Six expressions
+            of the same problem, still black and white.
+          </p>
+        </div>
+        <figure class="specimen specimen-wide">
+          <figcaption class="specimen-cap">Browse · every expression</figcaption>
+          <div class="specimen-shell">
+            <div class="board" data-reveal>
+              <article class="wf browse">
+                <div class="meta">
+                  <div class="id">A1 · LIST</div>
+                  <div class="premise">Exception inbox</div>
+                  <div class="varies">System finds, you triage</div>
+                </div>
+                <div class="browse-body" aria-hidden="true">
+                  <div class="region">Exceptions</div>
+                  <div class="split">
+                    <div class="region">24 open</div>
+                    <div class="region grow">
+                      Whole Latte Love
+                      <span class="crumb">$3,408 · 3 docs</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="wf browse">
+                <div class="meta">
+                  <div class="id">A3 · TABLE</div>
+                  <div class="premise">Anomalies as a worklist</div>
+                  <div class="varies">Dedicated surface, bulk-first</div>
+                </div>
+                <div class="browse-body" aria-hidden="true">
+                  <div class="region">Anomalies</div>
+                  <div class="region">Open · High Δ · Resolve all</div>
+                  <div class="region grow">
+                    Merchant · Δ · Evidence
+                    <span class="crumb">Whole Latte Love — Downtown · $3,408</span>
+                  </div>
+                </div>
+              </article>
+              <article class="wf browse">
+                <div class="meta">
+                  <div class="id">B2 · DOC</div>
+                  <div class="premise">Claim as a brief</div>
+                  <div class="varies">Read, then decide</div>
+                </div>
+                <div class="browse-body" aria-hidden="true">
+                  <div class="region">Claim 1842</div>
+                  <div class="region grow">
+                    Packet + recommendation
+                    <span class="crumb">Approve $3,408 · 2 gaps</span>
+                  </div>
+                </div>
+              </article>
+              <article class="wf browse">
+                <div class="meta">
+                  <div class="id">C1 · WIZ</div>
+                  <div class="premise">Resolve in steps</div>
+                  <div class="varies">One decision per screen</div>
+                </div>
+                <div class="browse-body" aria-hidden="true">
+                  <div class="region">Step 2 of 4</div>
+                  <div class="region grow">
+                    Evidence check
+                    <span class="crumb">Missing PO on Gelt Provisions</span>
+                  </div>
+                  <div class="region">Back · Continue</div>
+                </div>
+              </article>
+              <article class="wf browse">
+                <div class="meta">
+                  <div class="id">D2 · CANVAS</div>
+                  <div class="premise">Markup the packet</div>
+                  <div class="varies">Spatial, in-document</div>
+                </div>
+                <div class="browse-body" aria-hidden="true">
+                  <div class="region">Packet</div>
+                  <div class="split">
+                    <div class="region grow">Invoice page 2</div>
+                    <div class="region">Flags</div>
+                  </div>
+                </div>
+              </article>
+              <article class="wf browse">
+                <div class="meta">
+                  <div class="id">E1 · OVERLAY</div>
+                  <div class="premise">Drawer on the claim</div>
+                  <div class="varies">Stay in the existing screen</div>
+                </div>
+                <div class="browse-body" aria-hidden="true">
+                  <div class="region grow">
+                    Claim 1842
+                    <span class="crumb">drawer · Resolve anomaly</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </figure>
+
+        <div class="prose tight">
+          <h2 class="cmd">/product-flow</h2>
+          <p>
+            Four steps on a good afternoon. Empty and a call mid-review
+            branch off that path.
+          </p>
+        </div>
+        <figure class="flow-map" data-reveal>
+          <figcaption class="specimen-cap">Resolve an anomaly</figcaption>
+          <p class="sr-only">
+            Open list, then open packet, decide, and resolve. From the list,
+            empty means wait for the nightly batch. From the packet, a phone
+            call keeps the row so you can resume.
+          </p>
+          <div class="diagram" aria-hidden="true">
+            <div class="box g-ol">Open list</div>
+            <span class="arr arr-h g-a1"></span>
+            <div class="box g-op">Open packet</div>
+            <span class="arr arr-h g-a2"></span>
+            <div class="box g-de">Decide</div>
+            <span class="arr arr-h g-a3"></span>
+            <div class="box box-end g-rs">Resolve</div>
+            <span class="arr arr-v g-s1"></span>
+            <span class="arr arr-v g-s2"></span>
+            <div class="box box-alt g-em">Empty</div>
+            <div class="box box-alt g-ph">Phone rings</div>
+            <span class="arr arr-v g-s3"></span>
+            <div class="box box-alt g-re">Resume row</div>
+          </div>
+        </figure>
+
+        <div class="prose tight">
+          <h2 class="cmd">/product-validate</h2>
+          <p>
+            The cheapest test of the assumption that would kill the idea.
+            Five sessions asked if estimators would leave the packet. They
+            did not.
+          </p>
+        </div>
+        <figure class="specimen specimen-doc specimen-live" data-reveal>
+          <figcaption class="specimen-cap">Session 3 of 5 · 11:42</figcaption>
+          <div class="specimen-shell">
+            <div class="dash" aria-hidden="true">
+              <header class="dash-top">
+                <p class="dash-brand">Estimator</p>
+                <p class="dash-crumb">Claims / 1842</p>
+              </header>
+              <div class="dash-hero">
+                <p class="dash-label">Contested</p>
+                <p class="dash-sum">$3,408.00</p>
+                <p class="dash-sub">
+                  Whole Latte Love — Downtown · Invoice 1842-A · 12 Mar 2026
+                </p>
+              </div>
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Description</th>
+                    <th>Qty</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Espresso machine repair</td>
+                    <td>1</td>
+                    <td>$2,140.00</td>
+                  </tr>
+                  <tr class="is-flagged">
+                    <td>Labor, after hours</td>
+                    <td>4 hrs</td>
+                    <td>$680.00</td>
+                  </tr>
+                  <tr>
+                    <td>Parts · gasket, solenoid</td>
+                    <td>2</td>
+                    <td>$588.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <ol class="findings">
+            <li>
+              <span class="findings-n">1</span>
+              <div>
+                <p class="findings-title">They stayed on this invoice</p>
+                <p>Six minutes twelve seconds. Longest pause on after-hours labor.</p>
+              </div>
+            </li>
+            <li>
+              <span class="findings-n">2</span>
+              <div>
+                <p class="findings-title">The worklist was never used</p>
+                <p>Opened once, then ignored. Review was never started.</p>
+              </div>
+            </li>
+          </ol>
+        </figure>
+
+        <div class="prose tight">
+          <h2 class="cmd">/product-review</h2>
+          <p>
+            Names the broken layer. It will not polish a wrong concept.
+          </p>
+        </div>
+        <article class="brief">
+          <p class="brief-file">QA</p>
+          <p class="brief-kicker">Highest broken layer · Interaction</p>
+          <h3>Ship with debt</h3>
+          <p>
+            Intent holds. The return view after a call is missing. Resume the
+            selected row. Logged in decisions.md.
+          </p>
+        </article>
+      </section>
+
+      <div class="prose">
+        <h2>How much runs</h2>
+        <p>
+          The orchestrator sizes the route to the uncertainty. A clear change
+          to a known table gets patterns, flow, craft, and a QA pass. When
+          the problem is understood and the mechanism is not, it frames first
+          and storms options. Fuzzy or high-stakes work also tests the
+          assumption most likely to kill the idea.
+        </p>
+        <p>
+          If the mechanism is already chosen, it skips the storm and says
+          why. <code>PROCEED WITH ASSUMPTION</code> is a normal gate.
+        </p>
+
+        <h2>What lands in the repo</h2>
+        <p>
+          <code>problem.md</code>, <code>model.md</code>,
+          <code>design/sweep/board.html</code>, and a one-page
+          <code>context.md</code> every phase updates. Craft stays in
+          whatever system you already use.
+        </p>
+
+        <h2>Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Do I run every phase every time?</summary>
+            <div class="faq-body">
+              <div>
+                <p>
+                  No. The orchestrator skips anything that does not reduce a
+                  named uncertainty, and it has to say why.
+                </p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>Does this replace my design system?</summary>
+            <div class="faq-body">
+              <div>
+                <p>
+                  No. This suite decides why something exists and how it
+                  works. Expression is a plug-in: Linear, Ramp, better-ui,
+                  your tokens.
+                </p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>Will it work on a feature we already shipped?</summary>
+            <div class="faq-body">
+              <div>
+                <p>
+                  Yes, if the diagnosis is honest. Inspection starts with the
+                  codebase and current behavior. Critique mode is the entry
+                  when something already live feels off.
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <p>
+        <a href="https://github.com/stvnprkns/product-define">GitHub</a>
+        · by Steve Perkins
+      </p>
+    </footer>
+
+    <script src="./site.js?v=3"></script>
+  </body>
+</html>

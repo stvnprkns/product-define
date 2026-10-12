@@ -14,6 +14,8 @@ npx skills add stvnprkns/product-define
 
 You can also open the `skills/` folders in this repo, or install the root `*.skill` zips.
 
+A lean public page lives in [`site/`](site/).
+
 ## How to use it
 
 Say **`product-define`** and describe the work.
