@@ -6,9 +6,9 @@
   --faint: oklch(0.55 0 0);
   --line: oklch(0 0 0 / 0.08);
   --surface: oklch(0.965 0 0);
-  --accent: oklch(0.42 0.17 250);
+  --accent: oklch(0.18 0 0);
   --accent-text: oklch(1 0 0);
-  --focus: oklch(0.42 0.17 250);
+  --focus: oklch(0.18 0 0);
   --measure: 38rem;
   --pad: clamp(1.25rem, 4vw, 2rem);
   --ease: cubic-bezier(0.2, 0, 0, 1);
@@ -41,9 +41,9 @@
     --faint: oklch(0.64 0 0);
     --line: oklch(1 0 0 / 0.1);
     --surface: oklch(0.2 0 0);
-    --accent: oklch(0.78 0.09 250);
-    --accent-text: oklch(0.25 0.08 250);
-    --focus: oklch(0.78 0.09 250);
+    --accent: oklch(0.93 0 0);
+    --accent-text: oklch(0.18 0 0);
+    --focus: oklch(0.93 0 0);
     --rain: oklch(0.42 0 0);
     --shadow-border: 0 0 0 1px oklch(1 0 0 / 0.08);
     --shadow-border-hover: 0 0 0 1px oklch(1 0 0 / 0.13);
